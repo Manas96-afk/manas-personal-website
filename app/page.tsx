@@ -20,8 +20,15 @@ import {
   MonitorPlay,
   Layers
 } from 'lucide-react';
-import DigitalDragon from '@/components/DigitalDragon';
-import AbstractSculpture from '@/components/AbstractSculpture';
+import dynamic from 'next/dynamic';
+
+const AbstractSculpture = dynamic(() => import('@/components/AbstractSculpture'), {
+  ssr: false,
+});
+
+const DigitalDragon = dynamic(() => import('@/components/DigitalDragon'), {
+  ssr: false,
+});
 
 // --- Components ---
 
