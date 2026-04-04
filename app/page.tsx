@@ -447,7 +447,7 @@ function TimelineSection() {
 
 function Footer() {
   return (
-    <footer className="py-16 md:py-24 px-4 bg-black border-t border-white/10">
+    <footer className="py-16 md:py-24 px-4 bg-black border-t border-white/10" role="contentinfo">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-white mb-6 md:mb-8">
           Manas Bandhu
@@ -457,22 +457,22 @@ function Footer() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-12 md:mb-16">
-          <a href="https://github.com/Manas96-afk" target="_blank" rel="noopener noreferrer" className="p-3 md:p-4 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300">
+          <a href="https://github.com/Manas96-afk" target="_blank" rel="noopener noreferrer" className="p-3 md:p-4 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300" aria-label="GitHub Profile">
             <Github className="w-5 h-5 md:w-6 md:h-6" />
           </a>
-          <a href="https://www.instagram.com/manas_1303x/" target="_blank" rel="noopener noreferrer" className="p-3 md:p-4 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300">
+          <a href="https://www.instagram.com/manas_1303x/" target="_blank" rel="noopener noreferrer" className="p-3 md:p-4 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300" aria-label="Instagram Profile">
             <Instagram className="w-5 h-5 md:w-6 md:h-6" />
           </a>
-          <a href="https://www.linkedin.com/in/manas-bandhu" target="_blank" rel="noopener noreferrer" className="p-3 md:p-4 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300">
+          <a href="https://www.linkedin.com/in/manas-bandhu" target="_blank" rel="noopener noreferrer" className="p-3 md:p-4 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300" aria-label="LinkedIn Profile">
             <Linkedin className="w-5 h-5 md:w-6 md:h-6" />
           </a>
-          <a href="https://x.com/manas_1303x" target="_blank" rel="noopener noreferrer" className="p-3 md:p-4 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300">
+          <a href="https://x.com/manas_1303x" target="_blank" rel="noopener noreferrer" className="p-3 md:p-4 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300" aria-label="Twitter Profile">
             <Twitter className="w-5 h-5 md:w-6 md:h-6" />
           </a>
-          <a href="https://www.youtube.com/@cnomo_editz" target="_blank" rel="noopener noreferrer" className="p-3 md:p-4 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300">
+          <a href="https://www.youtube.com/@cnomo_editz" target="_blank" rel="noopener noreferrer" className="p-3 md:p-4 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300" aria-label="YouTube Channel">
             <Youtube className="w-5 h-5 md:w-6 md:h-6" />
           </a>
-          <a href="mailto:mbandhu96@gmail.com" className="p-3 md:p-4 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300">
+          <a href="mailto:mbandhu96@gmail.com" className="p-3 md:p-4 rounded-full bg-zinc-900 hover:bg-white hover:text-black transition-all duration-300" aria-label="Email Me">
             <Mail className="w-5 h-5 md:w-6 md:h-6" />
           </a>
         </div>
@@ -487,21 +487,28 @@ function Footer() {
 
 export default function Home() {
   return (
-    <main className="bg-black min-h-screen text-white selection:bg-white/20 relative">
-      <div className="fixed inset-0 z-0">
-        <AbstractSculpture />
-      </div>
-      <DigitalDragon />
-      <div className="relative z-10">
-        <HeroSection />
-        <PhilosophySection />
-        <VisualStorytellingSection />
-        <GamingSection />
-        <DataJourneySection />
-        <SkillsSection />
-        <TimelineSection />
-        <Footer />
-      </div>
-    </main>
+    <>
+      <header className="sr-only">
+        <h1>Manas Bandhu | Creative Technologist & Data Analyst</h1>
+      </header>
+      <main className="bg-black min-h-screen text-white selection:bg-white/20 relative" role="main">
+        <div className="fixed inset-0 z-0" aria-hidden="true">
+          <AbstractSculpture />
+        </div>
+        <div aria-hidden="true">
+          <DigitalDragon />
+        </div>
+        <div className="relative z-10">
+          <HeroSection />
+          <PhilosophySection />
+          <VisualStorytellingSection />
+          <GamingSection />
+          <DataJourneySection />
+          <SkillsSection />
+          <TimelineSection />
+          <Footer />
+        </div>
+      </main>
+    </>
   );
 }
