@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Orbitron, JetBrains_Mono } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -60,6 +61,7 @@ export default function RootLayout({
         className={`${inter.variable} ${orbitron.variable} ${mono.variable} antialiased bg-black text-white`}
       >
         <SmoothScroll>{children}</SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
