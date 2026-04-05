@@ -9,31 +9,32 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "@react-three/drei": "^10.0.0",
+    "@react-three/fiber": "^9.0.0",
+    "@vercel/analytics": "^2.0.1",
+    "clsx": "^2.1.1",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.18",
     "lucide-react": "^0.446.0",
+    "motion": "^12.0.0",
     "next": "15.1.11",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "clsx": "^2.1.1",
     "tailwind-merge": "^2.5.4",
-    "three": "^0.170.0",
-    "@react-three/fiber": "^9.0.0",
-    "@react-three/drei": "^10.0.0",
-    "gsap": "^3.12.5",
-    "@gsap/react": "^2.1.1",
-    "lenis": "^1.1.18",
-    "motion": "^12.0.0"
+    "three": "^0.170.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "4.0.0-alpha.33",
     "@types/node": "^20",
     "@types/react": "19.0.0",
     "@types/react-dom": "19.0.0",
     "@types/three": "^0.170.0",
-    "postcss": "^8.4.49",
-    "tailwindcss": "4.0.0-alpha.33",
-    "@tailwindcss/postcss": "4.0.0-alpha.33",
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
-    "eslint-config-next": "15.1.11"
+    "eslint-config-next": "15.1.11",
+    "postcss": "^8.4.49",
+    "tailwindcss": "4.0.0-alpha.33",
+    "typescript": "^5"
   }
 }
