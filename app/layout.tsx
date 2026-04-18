@@ -39,10 +39,6 @@ export const metadata: Metadata = {
     description: "Personal portfolio website of Manas Bandhu",
     creator: "@manas_1303x",
   },
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
   manifest: '/manifest.webmanifest',
 };
 
